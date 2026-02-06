@@ -2,7 +2,7 @@
     <id>n1ql.query.generator</id>
     <name>N1QL Query Generator</name>
     <version>1.1.0</version>
-    <vendor>N1QL Query Generator</vendor>
+    <vendor email="support@lamaminitools.com" url="https://github.com/lamaminitools/n1ql-query-generator">LAMA miniTools</vendor>
 
     <idea-version since-build="233"/>
 
@@ -55,7 +55,7 @@
                     secondary="true"
                     anchor="right"
                     factoryClass="n1ql.query.generator.ui.QueryBuilderToolWindowFactory"
-                    icon="/icons/couchbase.svg"/>
+                    icon="/icons/n1ql_icon.svg"/>
         <applicationService serviceImplementation="n1ql.query.generator.services.QueryHistoryManager"/>
         <applicationService serviceImplementation="n1ql.query.generator.services.TemplatesManager"/>
     </extensions>

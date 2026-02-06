@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Created-By: Gradle 8.5
-Build-JVM: 17.0.7 (Oracle Corporation 17.0.7+8-LTS-224)
+Build-JVM: 21.0.4 (Oracle Corporation 21.0.4+8-LTS-274)
 Version: 1.1.0
 Build-Plugin: Gradle IntelliJ Plugin
 Build-Plugin-Version: 1.17.2
