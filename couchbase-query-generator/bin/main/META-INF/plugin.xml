@@ -1,0 +1,72 @@
+<idea-plugin>
+    <id>n1ql.query.generator</id>
+    <name>N1QL Query Generator</name>
+    <version>1.1.0</version>
+    <vendor>N1QL Query Generator</vendor>
+
+    <idea-version since-build="233"/>
+
+    <description><![CDATA[
+        <h2>N1QL Query Generator for Couchbase</h2>
+        <p>A visual, form-based query builder that helps developers generate Couchbase N1QL queries without needing to memorize syntax.</p>
+        
+        <h3>Features:</h3>
+        <ul>
+            <li>Visual query builder with guided UI</li>
+            <li>Support for SELECT, INSERT, UPDATE, DELETE, UPSERT operations</li>
+            <li>Dynamic WHERE clause builder with multiple conditions</li>
+            <li>Aggregation builder (GROUP BY, COUNT, SUM, AVG, etc.)</li>
+            <li>Subquery support for complex queries</li>
+            <li>Syntax highlighting in query preview</li>
+            <li>Query history with favorites</li>
+            <li>Built-in and custom query templates</li>
+            <li>JSON schema import for field suggestions</li>
+            <li>One-click copy to clipboard or insert at cursor</li>
+            <li>No database connection required - pure offline query generation</li>
+        </ul>
+        
+        <p>Perfect for developers new to Couchbase or those who want to quickly generate correct N1QL syntax.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>1.1.0</h3>
+        <ul>
+            <li>NEW: Aggregation Builder (GROUP BY, HAVING, COUNT, SUM, AVG, MIN, MAX)</li>
+            <li>NEW: Syntax highlighting in query preview</li>
+            <li>NEW: Query history with search and favorites</li>
+            <li>NEW: Query templates library (built-in + custom)</li>
+            <li>NEW: JSON schema import for field auto-detection</li>
+            <li>NEW: Save queries as reusable templates</li>
+        </ul>
+        <h3>1.0.0</h3>
+        <ul>
+            <li>Initial release</li>
+            <li>SELECT, INSERT, UPDATE, DELETE, UPSERT query builders</li>
+            <li>WHERE clause builder with multiple operators</li>
+            <li>Subquery support</li>
+            <li>Copy to clipboard and insert at cursor actions</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="N1QL Query Generator"
+                    secondary="true"
+                    anchor="right"
+                    factoryClass="n1ql.query.generator.ui.QueryBuilderToolWindowFactory"
+                    icon="/icons/couchbase.svg"/>
+        <applicationService serviceImplementation="n1ql.query.generator.services.QueryHistoryManager"/>
+        <applicationService serviceImplementation="n1ql.query.generator.services.TemplatesManager"/>
+    </extensions>
+
+    <actions>
+        <action id="n1ql.query.generator.OpenQueryBuilder"
+                class="n1ql.query.generator.actions.OpenQueryBuilderAction"
+                text="Open N1QL Query Builder"
+                description="Open the N1QL Query Generator tool window">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
+        </action>
+    </actions>
+</idea-plugin>
