@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Created-By: Gradle 8.5
 Build-JVM: 21.0.4 (Oracle Corporation 21.0.4+8-LTS-274)
-Version: 1.1.0
+Version: 1.1.1
 Build-Plugin: Gradle IntelliJ Plugin
 Build-Plugin-Version: 1.17.2
 Build-OS: Windows 11 10.0 amd64

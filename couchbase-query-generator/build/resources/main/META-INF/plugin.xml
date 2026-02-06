@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>n1ql.query.generator</id>
   <name>N1QL Query Generator</name>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <vendor email="support@lamaminitools.com" url="https://github.com/lamaminitools/n1ql-query-generator">LAMA miniTools</vendor>
   <idea-version since-build="233" />
   <description><![CDATA[<h2>N1QL Query Generator for Couchbase</h2>
